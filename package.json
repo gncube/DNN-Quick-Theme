@@ -1,0 +1,27 @@
+{
+  "name": "quicktheme",
+  "version": "1.0.0",
+  "description": "Build fast, responsive sites with Bootstrap",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gncube/DNN-Quick-Theme.git"
+  },
+  "keywords": [
+    "DNN",
+    "Bootstrap",
+    "nvQuickTheme"
+  ],
+  "author": "Gerald Ncube",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gncube/DNN-Quick-Theme/issues"
+  },
+  "homepage": "https://github.com/gncube/DNN-Quick-Theme#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}

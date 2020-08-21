@@ -1,0 +1,17 @@
+<h3>Unify DNN Skin</h3>
+<p class="Contributor">
+	Gerald Ncube&reg; <br />
+	<a href="mailto:me@geraldncube.co.uk">me@geraldncube.co.uk</a><br />
+	<a href=https://geraldncube.co.uk>https://geraldncube.co.uk</a><br />
+</p>
+<hr/>
+<div class="License">
+	<p class="Owner">
+		<h3>About Unify Skin</h3>
+		<strong>Version 9.6.4</strong><br /><br />		
+		This release requires DotNetNuke core 6.2 or greater. <br /><br />
+		<ul>
+		<li></li>
+		</ul>
+	</p>
+</div>

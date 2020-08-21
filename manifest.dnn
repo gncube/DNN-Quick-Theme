@@ -1,0 +1,102 @@
+<dotnetnuke type="Package" version="9.0">
+  <packages>
+    <package name="GSN.Bootify" type="Skin" version="3.0.6">
+      <friendlyName>GSN.Bootify</friendlyName>
+      <description>A DNN Theme built using a Dev Framework using codes</description>
+      <iconFile>MyIcon.png</iconFile>
+      <owner>
+        <name>GSN</name>
+        <organization>GSN</organization>
+        <url>https://geraldncube.co.uk</url>
+        <email>me@geraldncube.co.uk</email>
+      </owner>
+      <azureCompatible>true</azureCompatible>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="coreVersion">09.00.00</dependency>
+      </dependencies>
+      <components>
+        <component type="Skin">
+          <skinFiles>
+            <basePath>Portals\_default\Skins\GSN.Bootify\</basePath>
+            <skinName>GSN.Bootify</skinName>
+          </skinFiles>
+        </component>
+        <component type="ResourceFile">
+          <resourceFiles>
+            <basePath>Portals\_default\Skins\GSN.Bootify\</basePath>
+            <resourceFile>
+              <name>GSN.BootifySkins.zip</name>
+            </resourceFile>
+          </resourceFiles>
+        </component>
+      </components>
+    </package>
+    <package name="GSN.Bootify" type="Container" version="3.0.6">
+      <friendlyName>GSN.Bootify Containers</friendlyName>
+      <description>A DNN Theme built using a Dev Framework using codes</description>
+      <iconFile>MyIcon.png</iconFile>
+      <owner>
+        <name>GSN</name>
+        <organization>GSN</organization>
+        <url>https://geraldncube.co.uk</url>
+        <email>me@geraldncube.co.uk</email>
+      </owner>
+      <azureCompatible>true</azureCompatible>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="coreVersion">09.00.00</dependency>
+      </dependencies>
+      <components>
+        <component type="Container">
+          <containerFiles>
+            <containerName>GSN.Bootify</containerName>
+            <basePath>Portals\_default\Containers\GSN.Bootify</basePath>
+          </containerFiles>
+        </component>
+        <component type="ResourceFile">
+          <resourceFiles>
+            <basePath>Portals\_default\Containers\GSN.Bootify\</basePath>
+            <resourceFile>
+              <name>GSN.BootifyContainers.zip</name>
+            </resourceFile>
+          </resourceFiles>
+        </component>
+
+        <!-- Ensure MIME types are mapped -->
+        <component type="Config">
+          <config>
+            <configFile>web.config</configFile>
+            <install>
+              <configuration>
+                <nodes configfile="web.config">
+                  <node path="/configuration/system.webServer" targetpath="/configuration/system.webServer/staticContent" action="update" collision="ignore">
+                    <staticContent>
+                    </staticContent>
+                  </node>
+                  <node path="/configuration/system.webServer/staticContent" action="update" key="fileExtension" collision="ignore">
+                    <remove fileExtension=".otf" />
+                    <mimeMap fileExtension=".otf" mimeType="font/otf" />
+                    <remove fileExtension=".svg" />
+                    <mimeMap fileExtension=".svg" mimeType="image/svg+xml" />
+                    <remove fileExtension=".woff" />
+                    <mimeMap fileExtension=".woff" mimeType="font/x-woff" />
+                    <remove fileExtension=".woff2" />
+                    <mimeMap fileExtension=".woff2" mimeType="application/font-woff2" />
+                  </node>
+                </nodes>
+              </configuration>
+            </install>
+            <uninstall>
+              <configuration>
+                <nodes />
+              </configuration>
+            </uninstall>
+          </config>
+        </component>
+      </components>
+    </package>
+  </packages>
+</dotnetnuke>
